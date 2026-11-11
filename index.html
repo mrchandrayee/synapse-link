@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Link - Advanced Canvas Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="hud" class="hidden">
+        <div>
+            <div class="hud-stat">Score: <span id="score">0</span></div>
+            <div class="hud-stat" style="font-size: 16px; color: #aaa;">Level: <span id="level">1</span></div>
+        </div>
+        <div>
+            <div class="hud-stat" style="text-align: right;">Signal Strength</div>
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="startMenu" class="menu-overlay">
+        <h1>Synapse Link</h1>
+        <p class="instructions">
+            <strong>MOUSE</strong> to move the Pre-Synaptic Terminal up and down.<br>
+            <strong>CLICK</strong> to fire Neurotransmitters.<br><br>
+            Hit the Green Receptors to build connections and score points. Avoid the Red Neurotoxins floating in the cleft, or your signal strength will deplete!
+        </p>
+        <button id="startBtn">Initiate Sequence</button>
+    </div>
+
+    <div id="gameOverMenu" class="menu-overlay hidden">
+        <h1 style="color: var(--neon-red); text-shadow: 0 0 20px var(--neon-red);">Connection Lost</h1>
+        <p class="instructions" style="font-size: 24px; color: white;">Final Score: <span id="finalScore">0</span></p>
+        <button id="restartBtn">Reboot Synapse</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="game.js"></script>
+</body>
+</html>
